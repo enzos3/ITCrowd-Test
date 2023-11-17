@@ -8,7 +8,7 @@ export default function DeleteProduct({ productId, onClose }) {
     try {
       // Make a DELETE request to delete the product
       const response = await fetch(
-        `http://18.188.189.216:5000/products/${productId}`,
+        `https://itcrowd-server.onrender.com/products/${productId}`,
         {
           method: "DELETE",
           headers: {

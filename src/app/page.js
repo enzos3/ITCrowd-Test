@@ -4,7 +4,7 @@ import DetailPopupCard from "./components/detailPopupCard";
 
 const getProducts = async () => {
   try {
-    const res = await fetch("http://18.188.189.216:5000/products", {
+    const res = await fetch("https://itcrowd-server.onrender.com/products", {
       cache: "no-store",
     });
     if (!res.ok) {

@@ -20,15 +20,18 @@ export default function CreateProduct({ onClose }) {
 
     try {
       if (formData.brand && formData.brand.name) {
-        const brandRes = await fetch("http://18.188.189.216:5000/brands", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization:
-              "8f65cabc4f6c97e5d251d9bd2de889652e50c2c28342bbfd59c85cde94d8a515",
-          },
-          body: JSON.stringify(formData.brand),
-        });
+        const brandRes = await fetch(
+          "https://itcrowd-server.onrender.com/brands",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization:
+                "8f65cabc4f6c97e5d251d9bd2de889652e50c2c28342bbfd59c85cde94d8a515",
+            },
+            body: JSON.stringify(formData.brand),
+          }
+        );
 
         if (brandRes.ok) {
           const brandData = await brandRes.json();
@@ -39,15 +42,18 @@ export default function CreateProduct({ onClose }) {
         }
       }
 
-      const productRes = await fetch("http://18.188.189.216:5000/products", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization:
-            "8f65cabc4f6c97e5d251d9bd2de889652e50c2c28342bbfd59c85cde94d8a515",
-        },
-        body: JSON.stringify(formData),
-      });
+      const productRes = await fetch(
+        "https://itcrowd-server.onrender.com/products",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization:
+              "8f65cabc4f6c97e5d251d9bd2de889652e50c2c28342bbfd59c85cde94d8a515",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       if (productRes.ok) {
         setReloadFlag(true);

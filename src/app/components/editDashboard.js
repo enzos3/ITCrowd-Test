@@ -30,7 +30,7 @@ export default function UpdateProduct({ product, onClose }) {
       }
 
       const res = await fetch(
-        `http://18.188.189.216:5000/products/${product._id}`,
+        `https://itcrowd-server.onrender.com/products/${product._id}`,
         {
           method: "PUT",
           headers: {
