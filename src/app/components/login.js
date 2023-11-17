@@ -21,7 +21,7 @@ const Login = () => {
   const handleLogin = async () => {
     try {
       const response = await fetch(
-        `http://18.188.189.216:5000/admins/login?username=${username}&password=${password}`,
+        `https://itcrowd-server.onrender.com/admins/login?username=${username}&password=${password}`,
         {
           method: "GET",
           headers: {
