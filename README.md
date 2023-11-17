@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Hello I'm [Enzo Ariel Fiol](https://enzofiol.tech/) this Fullstack challenge was made with Next14, NodeJS and Tailwind. [ITCrowd Test](https://it-crowd-test.vercel.app/).
 
-## Getting Started
+## Brief
 
-First, run the development server:
+## NodeJS Server (https://itcrowd-server.onrender.com/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This Node.js application is a simple CRUD (Create, Read, Update, Delete) server using Express.js and MongoDB (with Mongoose) for data storage. Here's a brief overview of the main components and functionality:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+`Dependencies`:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+[express]: A web application framework for Node.js.
+[mongoose]: An ODM (Object Data Modeling) library for MongoDB and Node.js.
+[body-parser]: Middleware to parse the request body.
+[cors]: Middleware to handle Cross-Origin Resource Sharing.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+`Server Setup`:
 
-## Learn More
+The server is created using [Express], and it listens on port 5000 (const port = 5000).
+MongoDB connection is established using Mongoose with a connection string (const uri).
 
-To learn more about Next.js, take a look at the following resources:
+`Token Generation:`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+A function [generateToken] is defined using the crypto module to generate a random token whenever needed.
+MongoDB Schemas and Models:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Three MongoDB schemas and models are defined using Mongoose:
+[Admin]: Represents an administrator with fields for username, password, and a token.
+[Brand]: Represents a brand with fields for name and logo URL.
+[Product]: Represents a product with fields for name, description, image URL, price, and a reference to a brand.
+Middleware:
 
-## Deploy on Vercel
+[authorizeAdmin]: Middleware function to check authorization for admin routes. It verifies the presence and validity of a token in the request header.
+Routes:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+`Admin Routes:`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[POST] /admins: Creates a new admin with a username, password, and a generated token.
+[GET] /admins/login: Performs login with a username and password, returning success or failure.
+
+`Brand Routes:`
+
+[GET] /brands: Retrieves all brands.
+[POST] /brands: Creates a new brand with a name and logo URL.
+
+`Product Routes:`
+
+[GET] /products: Retrieves all products, populating brand information.
+[GET] /products/search: Filters products by name and description.
+[POST] /products: Creates a new product with various attributes.
+[PUT] /products/:id: Updates a product by ID, including the option to update the associated brand.
+[DELETE] /products/:id: Deletes a product by ID.
+
+## Next14 Frontend (https://it-crowd-test.vercel.app/)
+
+This smooth and responsive website, shows the products with their images in cards, when you click on [ReadMore->] a modal window will open with description of the product.
+
+[Admin-UI] If you click on [LOGIN] another modal with a username and password.
+
+## Admin Credentials: [USER]:admin [PASSWORD]:admin (For test)
+
+One you enter a correct Credential, you will be redirect to an Admin Dashboard
+
+[Admin-Dashboard] There is a list with all the information of the products.
+
+`Edit` on click, a modal with the information of the selected product will show. You can change any field and Update it. This will reload the page with all the new information.
+
+`Brand Edit` when you edit a Brand, and the products have the same Brand, they're all going to be updated automatically.
+
+`Delete` if you need to delete a product, the website will ask you again to confirm the deletion.
+
+`Create product` an empty modal will show so you can fill with all you product information. Once you created, this will store at the end of the list products.
+
+Hope you can see all funcionalities of the website, and likes you. Have a great day! I'll be waiting for you feedback.
+
+Regards,
+
+Enzo Ariel Fiol.
