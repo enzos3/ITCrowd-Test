@@ -1,10 +1,10 @@
 Hello I'm [Enzo Ariel Fiol](https://enzofiol.tech/) this Fullstack challenge was made with Next14, NodeJS and Tailwind. 
 
-## [ITCrowd Test (https://it-crowd-test.vercel.app/)].
+## Website: ITCrowd Test (https://it-crowd-test.vercel.app/).
 
 ## Brief
 
-## NodeJS Server (https://itcrowd-server.onrender.com/)
+## NodeJS Server (Render) (https://itcrowd-server.onrender.com/products)
 
 This Node.js application is a simple CRUD (Create, Read, Update, Delete) server using Express.js and MongoDB (with Mongoose) for data storage. Here's a brief overview of the main components and functionality:
 
@@ -54,7 +54,7 @@ Routes:
 [PUT] /products/:id: Updates a product by ID, including the option to update the associated brand.
 [DELETE] /products/:id: Deletes a product by ID.
 
-## Next14 Frontend (https://it-crowd-test.vercel.app/)
+## Next14 Frontend (Vercel) (https://it-crowd-test.vercel.app/)
 
 This smooth and responsive website, shows the products with their images in cards, when you click on [ReadMore->] a modal window will open with description of the product.
 
