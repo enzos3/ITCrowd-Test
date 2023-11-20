@@ -58,11 +58,11 @@ Routes:
 
 This smooth and responsive website, shows the products with their images in cards, when you click on [ReadMore->] a modal window will open with description of the product.
 
-[Admin-UI] If you click on [LOGIN] another modal with a username and password.
+[Admin-UI] If you click on [LOGIN] another modal with a username and password inputs with Popup.
 
 ## Admin Credentials: [USER]:admin [PASSWORD]:admin (For test)
 
-One you enter a correct Credential, you will be redirect to an Admin Dashboard
+Once you enter a correct Credential, you will be redirect to an Admin Dashboard
 
 [Admin-Dashboard] There is a list with all the information of the products.
 
