@@ -6,6 +6,8 @@ Hello I'm [Enzo Ariel Fiol](https://enzofiol.tech/) this Fullstack challenge was
 
 This Node.js application is a simple CRUD (Create, Read, Update, Delete) server using Express.js and MongoDB (with Mongoose) for data storage. Here's a brief overview of the main components and functionality:
 
+PS: The server could have up to 40s delay in make a the first response, when you enter on the website for the first time.
+
 `Dependencies`:
 
 [express]: A web application framework for Node.js.
